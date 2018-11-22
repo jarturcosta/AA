@@ -3,7 +3,7 @@ import random
 import time
 import itertools
 import os
-import psutil
+#import psutil
 
 
 '''         
@@ -56,24 +56,30 @@ def get_neighbors(v,edges):
             n.append(e[(e.index(v)+1)%2])
     return n
 
+def checker(edges,vertice_set):
+    possible_edges = itertools.combinations(vertice_set,2)
+    for e in possible_edges:
+        if e in edges:
+            return False
+    return True
+
+def powerset(iterable):
+    "powerset([1,2,3]) --> () (1,) (2,) (3,) (1,2) (1,3) (2,3) (1,2,3)"
+    s = list(iterable)
+    return itertools.chain.from_iterable(itertools.combinations(s, r) for r in range(len(s) + 1))
+
 def calculate_independents(graph,vertices):
-    if not vertices:
-        vertices = set([random.choice(vertices)])  # pick a random node
-    else:
-        vertices = set(vertices)
-    neighbors = set.union(*[set(get_neighbors(v,graph)) for v in vertices])
-
-    indeps = list(vertices)  # initial
-    available_nodes = set(vertices).difference(neighbors.union(vertices))
-
-    while available_nodes:
-        # pick a random node from the available nodes
-        node = random.choice(list(available_nodes))
-        indeps.append(node)
-
-        available_nodes.difference_update(get_neighbors(node,graph) + [node])  # available_nodes = available_nodes - (node + node's neighbors)
-
-    return indeps
+    indeps = []
+    possible_sets = list(powerset(vertices))[len(vertices)+1:]
+    for s in possible_sets:
+        possible_edges = list(itertools.combinations(s,2))
+        isIndep = True
+        for e in possible_edges:
+            if e in graph:
+                isIndep = False
+        if isIndep==True:
+            indeps.append(s)
+    return max(indeps,key=lambda item:len(item))
 
 def get_max_edges(nv):
     return int((nv * (nv-1))/2)
