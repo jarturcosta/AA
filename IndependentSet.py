@@ -36,7 +36,7 @@ def generate_graphs(nv, ne):
 
 
 
-v_sizes = [4,5,6,7,8,9]  # diferent graph sizes
+v_sizes = [4,5,6,7,8,9,10,11]  # diferent graph sizes
 e_sizes = [0.2,0.3,0.4,0.5] # diferent edge quantity in relation to number of vertices
 times_dict = {}
 ops_dict = {}
@@ -50,6 +50,8 @@ def main():
         graphs = generate_graphs(v, int(v*e))
         for g in graphs:
             indepList.append(calculate_independents(g, get_vertice_list(v))[0])
+            if 100*(graphs.index(g) / len(graphs))%10 == 0:
+                print(str(100*(graphs.index(g) / len(graphs)))+"%")
         elapsed_time = time.time() - start                                          # Timer ends
         print("Time:", elapsed_time)
         print("Vertices/Edges: ", v, int(e*get_max_edges(v)))
@@ -67,10 +69,9 @@ def main():
     return indepList
 
 main()
-print(times_dict)
 
 print("Results (Operations):")
-print("%15s\t%15s\t%15s\t%15s\t%15s\t%15s\t%15s"%("Edges/Vertices","4","5","6","7","8","9"))
+print("%15s\t%15s\t%15s\t%15s\t%15s\t%15s\t%15s\t%15s\t%15s"%("Edges/Vertices","4","5","6","7","8","9","10","11"))
 cnt = 0
 for nVert, edgOps in ops_dict.items():
     line = "%15s\t"%("x"+str(e_sizes[cnt]))
@@ -81,7 +82,7 @@ for nVert, edgOps in ops_dict.items():
 
 
 print("\nResults (time):")
-print("%25s\t%25s\t%25s\t%25s\t%25s\t%25s\t%25s"%("Edges/Vertices","4","5","6","7","8","9"))
+print("%25s\t%25s\t%25s\t%25s\t%25s\t%25s\t%25s\t%25s\t%25s"%("Edges/Vertices","4","5","6","7","8","9","10","11"))
 cnt = 0
 for nVert, edgTime in times_dict.items():
     line = "%25s\t"%("x"+str(e_sizes[cnt]*get_max_edges(nVert)))
