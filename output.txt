@@ -1,0 +1,97 @@
+
+Time: 0.0009982585906982422
+Vertices/Edges:  4 1
+
+Time: 0.0
+Vertices/Edges:  4 1
+
+Time: 0.0
+Vertices/Edges:  4 2
+
+Time: 0.0
+Vertices/Edges:  4 3
+
+Time: 0.0009696483612060547
+Vertices/Edges:  5 2
+
+Time: 0.0
+Vertices/Edges:  5 3
+
+Time: 0.001993894577026367
+Vertices/Edges:  5 4
+
+Time: 0.0020236968994140625
+Vertices/Edges:  5 5
+
+Time: 0.0009965896606445312
+Vertices/Edges:  6 3
+
+Time: 0.0019943714141845703
+Vertices/Edges:  6 4
+
+Time: 0.009945154190063477
+Vertices/Edges:  6 6
+
+Time: 0.05986785888671875
+Vertices/Edges:  6 7
+
+Time: 0.003992319107055664
+Vertices/Edges:  7 4
+
+Time: 0.04484963417053223
+Vertices/Edges:  7 6
+
+Time: 0.04487943649291992
+Vertices/Edges:  7 8
+
+Time: 0.35205936431884766
+Vertices/Edges:  7 10
+
+Time: 0.012995004653930664
+Vertices/Edges:  8 5
+
+Time: 0.19145798683166504
+Vertices/Edges:  8 8
+
+Time: 1.8839631080627441
+Vertices/Edges:  8 11
+
+Time: 19.34926700592041
+Vertices/Edges:  8 14
+
+Time: 0.03690147399902344
+Vertices/Edges:  9 7
+
+Time: 0.7230665683746338
+Vertices/Edges:  9 10
+
+Time: 9.790823459625244
+Vertices/Edges:  9 14
+
+Time: 145.56581139564514
+Vertices/Edges:  9 18
+
+Time: 2.6957919597625732
+Vertices/Edges:  10 9
+
+Time: 45.87335205078125
+Vertices/Edges:  10 13
+
+Time: 899.2317912578583
+Vertices/Edges:  10 18
+
+Time: 32985.61145687103
+Vertices/Edges:  10 22
+
+Time: 9.190428018569946
+Vertices/Edges:  11 11
+
+Time: 191.6555848121643
+Vertices/Edges:  11 16
+
+Time: 4718.64111995697
+Vertices/Edges:  11 22
+
+Time: 46420.63236 (valor previsto pela equação y = 45579160 + (4.19426 - 45579160)/(1 + (x/9.511)^7.953006))
+Vertices/Edges:  11 27
+
